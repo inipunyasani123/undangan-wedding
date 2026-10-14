@@ -2,7 +2,7 @@
 
 Klasik floral rose & emas. Sampul berupa amplop pusaka dengan segel lilin “Buka Undangan”, lalu profil mempelai berbingkai lengkung, rangkaian akad & resepsi, cerita cinta, galeri, dan amplop digital.
 
-**Demo live:** https://undangan-wedding-eight.vercel.app
+**Demo live:** https://undangan-wedding.pintuweb.id
 
 ![Tangkapan layar](public/og.jpg)
 

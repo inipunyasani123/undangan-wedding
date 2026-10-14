@@ -25,7 +25,7 @@ const body = Poppins({
 const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Pernikahan Digital — Raka & Sinta","description":"Contoh undangan pernikahan digital: hitung mundur, galeri, peta, RSVP, ucapan, dan musik latar.","inLanguage":"id"};
 
 export const metadata = {
-  metadataBase: new URL("https://undangan-wedding-eight.vercel.app"),
+  metadataBase: new URL("https://undangan-wedding.pintuweb.id"),
   title: "Undangan Pernikahan Digital — Raka & Sinta",
   description: "Undangan pernikahan digital elegan: countdown, galeri, peta lokasi, RSVP, dan ucapan. Bagikan momen bahagia Raka & Sinta secara online.",
   applicationName: "Undangan Digital",
@@ -33,11 +33,11 @@ export const metadata = {
   authors: [{ name: "Undangan Digital" }],
   creator: "Undangan Digital",
   publisher: "Undangan Digital",
-  alternates: { canonical: "https://undangan-wedding-eight.vercel.app" },
+  alternates: { canonical: "https://undangan-wedding.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://undangan-wedding-eight.vercel.app",
+    url: "https://undangan-wedding.pintuweb.id",
     siteName: "Undangan Digital",
     title: "Undangan Pernikahan Digital — Raka & Sinta",
     description: "Undangan pernikahan digital elegan: countdown, galeri, peta lokasi, RSVP, dan ucapan. Bagikan momen bahagia Raka & Sinta secara online.",
