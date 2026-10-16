@@ -53,12 +53,30 @@ body {
 }
 .animate-wax-pulse { animation: wax-pulse 3s infinite cubic-bezier(0.66, 0, 0, 1); }
 
+/* Animasi masuk sampul memakai CSS: jalan sejak cat pertama tanpa menunggu JavaScript,
+   jadi nama mempelai (elemen LCP) tidak tertahan opacity 0 sampai halaman terhidrasi. */
+@keyframes masuk { from { opacity: 0; transform: translateY(14px); } }
+@keyframes masuk-skala { from { transform: scale(0.96); } }
+.masuk { animation: masuk 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--tunda, 0s); }
+.masuk-skala { animation: masuk-skala 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+/* Sampul keluar (dulu framer-motion; kini CSS supaya sampul tidak memerlukan pustaka animasi).
+   Halaman menunggu animationend sebelum melepas sampul. */
+.sampul-keluar { animation: sampul-keluar 0.9s ease-in-out forwards; pointer-events: none; }
+@keyframes sampul-keluar { to { opacity: 0; transform: translateY(-100%); } }
+
+/* Selama sampul terbuka, bilah demo di akhir <body> tertutup sampul. Sembunyikan juga dari
+   papan ketik & pembaca layar supaya fokus tidak jatuh ke tautan yang tak terlihat. */
+body:has([data-sampul]) > aside[aria-label="Tentang situs demo ini"] { visibility: hidden; }
+
 /* Aksesibilitas: indikator fokus jelas untuk navigasi keyboard */
 :focus-visible {
   outline: 2px solid var(--color-rose-deep);
   outline-offset: 2px;
   border-radius: 4px;
 }
+/* Target fokus terprogram (bukan kontrol, tidak bisa dicapai lewat Tab) tidak perlu cincin. */
+[tabindex="-1"]:focus-visible { outline: none; }
 
 /* Hormati preferensi pengguna yang mengurangi gerak */
 @media (prefers-reduced-motion: reduce) {
@@ -66,6 +84,7 @@ body {
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;

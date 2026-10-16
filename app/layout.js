@@ -17,12 +17,12 @@ const script = Great_Vibes({
 });
 const body = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['400', '500', '600'],
   variable: '--font-poppins',
   display: 'swap',
 });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Pernikahan Digital — Raka & Sinta","description":"Contoh undangan pernikahan digital: hitung mundur, galeri, peta, RSVP, ucapan, dan musik latar.","inLanguage":"id"};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Pernikahan Digital — Raka & Sinta","url":"https://undangan-wedding.pintuweb.id","description":"Contoh undangan pernikahan digital: hitung mundur, galeri, peta, RSVP, ucapan, dan musik latar.","inLanguage":"id"};
 
 export const metadata = {
   metadataBase: new URL("https://undangan-wedding.pintuweb.id"),

@@ -41,7 +41,7 @@ export default function Footer() {
         )}
         <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-cream/70">
           Dibuat dengan <Heart size={12} className="fill-rose text-rose" aria-hidden="true" /> untuk hari bahagia ·{' '}
-          <Link href="/kirim" className="underline underline-offset-4 hover:text-cream">Kirim ke tamu</Link>
+          <Link href="/kirim" className="inline-block py-2 underline underline-offset-4 hover:text-cream">Kirim ke tamu</Link>
         </p>
       </Reveal>
     </footer>

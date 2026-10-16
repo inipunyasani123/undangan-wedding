@@ -30,12 +30,14 @@ function BankCard({ item }) {
       )}
       <p className="mt-1 text-sm opacity-80">a.n. {item.holder}</p>
       <button
+        type="button"
         onClick={copy}
-        className="mt-4 inline-flex items-center gap-2 rounded-full bg-cream/20 px-4 py-2 text-xs font-medium transition hover:bg-cream/30"
+        className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-full bg-cream/20 px-4 py-2 text-xs font-medium transition hover:bg-cream/30"
       >
         {copied ? <Check size={14} aria-hidden="true" /> : <Copy size={14} aria-hidden="true" />}
         {copied ? 'Tersalin' : 'Salin Nomor'}
       </button>
+      <span className="sr-only" aria-live="polite">{copied ? `Nomor ${item.bank} tersalin` : ''}</span>
     </div>
   );
 }

@@ -3,18 +3,15 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import config from '@/lib/data';
+import { tanggalWIB } from '@/lib/utils';
 
 // Bagian pembuka setelah undangan dibuka.
 export default function Hero() {
   const { couple, opening, mainDate } = config;
-  const dateLabel = new Date(mainDate).toLocaleDateString('id-ID', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  const dateLabel = tanggalWIB(mainDate, { day: 'numeric', month: 'long', year: 'numeric' });
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 text-center">
+    <section className="relative flex min-h-svh items-center justify-center overflow-hidden px-6 text-center">
       <Image
         src={config.heroImage}
         alt=""

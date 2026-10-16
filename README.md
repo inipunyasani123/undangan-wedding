@@ -17,7 +17,7 @@ Klasik floral rose & emas. Sampul berupa amplop pusaka dengan segel lilin “Buk
 - Amplop digital: salin nomor rekening (nomor contoh diberi label)
 - RSVP & ucapan — mode demo, terus terang tidak mengirim data
 - **`/kirim` — alat tuan rumah:** ketik daftar tamu, dapatkan tautan pribadi tiap tamu dan pesan WhatsApp siap kirim. Semua diproses di peramban (localStorage), tanpa server.
-- Musik latar dengan tombol putar/jeda (judul lagu tampil di tombol dan footer)
+- Musik latar: tamu memilih nyala/mati lewat sakelar di sampul; baru diputar setelah undangan dibuka, lalu bisa dijeda lewat tombol mengambang (judul lagu tampil di tombol dan footer)
 - Halaman 404 bergaya sendiri
 
 ## Mengganti isi
